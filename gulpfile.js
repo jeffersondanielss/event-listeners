@@ -3,6 +3,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const watch = require('gulp-watch');
+const uglify = require('gulp-uglify')
  
 gulp.task('scripts', () => {
   return gulp.src('src/*.js')
@@ -10,7 +11,8 @@ gulp.task('scripts', () => {
     .pipe(babel({
         presets: ['es2015']
     }))
-    .pipe(concat('all.js'))
+    .pipe(concat('event-listeners.js'))
+    .pipe(uglify('event-listeners.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist'));
 });
