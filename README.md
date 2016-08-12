@@ -1,5 +1,5 @@
 # Event listeners
-> Search elements that have events.
+> Search elements that have events. `[beta]`
 
 ### The problem
 
@@ -12,7 +12,7 @@ The idea is based on looking at the DOM elements that have events that have been
 
 ### Usage
 
-To mark the elements that have events on the screen, run:
+To the elements that have events on the screen, run:
 ```js
 eventListeners.view()
 ```
