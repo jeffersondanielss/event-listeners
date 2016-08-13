@@ -11,8 +11,8 @@ gulp.task('scripts', () => {
     .pipe(babel({
         presets: ['es2015']
     }))
-    .pipe(concat('event-listeners.js'))
-    .pipe(uglify('event-listeners.js'))
+    .pipe(concat('event-listeners.min.js'))
+    .pipe(uglify('event-listeners.min.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist'));
 });

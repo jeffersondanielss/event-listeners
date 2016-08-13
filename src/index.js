@@ -1,4 +1,4 @@
-(function( app, document ){
+(( app, document ) => {
 
   'use strict';
 
@@ -36,17 +36,27 @@
     return Identity;
   }
 
+  app.setStyle = ( el ) => {
+    let style = `top: ${el.offsetTop}px;`;
+        style += `left: ${el.offsetLeft}px;`;
+        style += `position: absolute;`;
+        style += `z-index: 999;`;
+        style += `padding: 10px;`;
+        style += `color: #0ea5a3;`;
+        style += `background-color: #ace0df;`;
+        style += `border: 1px solid #00C2C1;`;
+        style += `font-size: 14px;`;
+
+    return style;
+  };
+
   //Displays the element, event and function.
   app.showEvents = ( el, events, listners ) => {
     let newElement = document.createElement('div');
     let id = app.getIdentity( el );
-    let style = `position: absolute;`;
-        style += `background-color: red;`;
-        style += `z-index: 999999;`;
-        style += `top: ${el.offsetTop}px;`;
-        style += `left: ${el.offsetLeft}px;`;
+    let style = setStyle( el );
 
-    newElement.setAttribute('class', 'events');
+    newElement.setAttribute('class', 'event');
     newElement.setAttribute('style', style);
 
     events.map(( curr ) => {

@@ -12,6 +12,12 @@ The idea is based on looking at the DOM elements that have events that have been
 
 ### Usage
 
+First include the script in your html document
+
+```html
+<script src="dist/event-listeners.min.js"></script>
+```
+
 To the elements that have events on the screen, run:
 ```js
 eventListeners.view()
