@@ -31,7 +31,7 @@
   app.getIdentity = ( el ) => {
     let elClasse = el.getAttribute('class');
     let elId = el.getAttribute('id');
-    let Identity = (elClasse) ? elClasse : elId;
+    let Identity = (elClasse) ? `.${elClasse}` : `#${elId}`;
 
     return Identity;
   }
@@ -41,7 +41,7 @@
         style += `left: ${el.offsetLeft}px;`;
         style += `position: absolute;`;
         style += `z-index: 999;`;
-        style += `padding: 10px;`;
+        style += `padding: 5px;`;
         style += `color: #0ea5a3;`;
         style += `background-color: #ace0df;`;
         style += `border: 1px solid #00C2C1;`;
@@ -60,7 +60,7 @@
     newElement.setAttribute('style', style);
 
     events.map(( curr ) => {
-      newElement.innerHTML = `[id]: ${id}, [fn name]: ${listners[curr][0].listener.name}, [eventName]: ${listners[curr][0].type}`;
+      newElement.innerHTML = `${id} - ${listners[curr][0].type} - ${listners[curr][0].listener.name}()`;
     });
 
     document.getElementsByTagName('body')[0].appendChild(newElement);
