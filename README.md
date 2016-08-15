@@ -18,12 +18,12 @@ First include the script in your html document
 <script src="dist/event-listeners.min.js"></script>
 ```
 
-To the elements that have events on the screen, run:
+To the elements that have events on the screen, run on the Chrome console:
 ```js
 eventListeners.view()
 ```
 
-To show only the elements in the console, run:
+To show only the elements in the console, run on the Chrome console:
 ```js
 eventListeners.console()
 ```
