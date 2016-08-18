@@ -37,8 +37,8 @@
   }
 
   app.setStyle = ( el ) => {
-    let style = `top: ${el.offsetTop}px;`;
-        style += `left: ${el.offsetLeft}px;`;
+    let style = `top: ${el.offsetTop + 7}px;`;
+        style += `left: ${el.offsetLeft + 7}px;`;
         style += `position: absolute;`;
         style += `z-index: 999;`;
         style += `padding: 5px;`;
@@ -46,6 +46,7 @@
         style += `background-color: #ace0df;`;
         style += `border: 1px solid #00C2C1;`;
         style += `font-size: 14px;`;
+        style += `opacity: 0.8;`;
 
     return style;
   };
